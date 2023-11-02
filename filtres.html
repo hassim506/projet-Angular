@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app>
+
+    <!--les filtres permet de filtrer les variables
+    soit en les triants ,en les organisant
+oubien en les filtrants-->
+<input type="text" ng-model="nbre1">
+
+<div ng-init="users=['Mamadou' , 'Hassim' , 'Diallo']">
+    <ul>
+        <li ng-repeat="user in users">
+            {{user | uppercase }}
+        </li>
+    </ul>
+    <!--filtrer par MOT-->
+    {{users | filter :'Di'}}
+   </div>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+
+   </script>
+</body>
+</html>
